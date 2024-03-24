@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     //MARK: - PROPERTIES
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
     @State private var showAddTodoView: Bool = false
 
     //MARK: - BODY
@@ -27,6 +29,7 @@ struct ContentView: View {
             })//: BUTTON ADD
             .sheet(isPresented: $showAddTodoView){
                 AddTodoView()
+                    .environment(\.managedObjectContext, self.managedObjectContext)
             }
         }//: NAVIGATION
     }

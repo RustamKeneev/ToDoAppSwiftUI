@@ -1,0 +1,22 @@
+
+Showing Recent Issues
+
+Build target ToDoAppSwiftUI of project ToDoAppSwiftUI with configuration Debug
+
+DataModelCompile /Users/rustamkeneev/Library/Developer/Xcode/DerivedData/ToDoAppSwiftUI-fjyyvnwqmgpxhognualqvvzalpmu/Build/Intermediates.noindex/Previews/ToDoAppSwiftUI/Products/Debug-iphonesimulator/ToDoAppSwiftUI.app/ /Users/rustamkeneev/Desktop/ToDoAppSwiftUI/Todo.xcdatamodeld (in target 'ToDoAppSwiftUI' from project 'ToDoAppSwiftUI')
+    cd /Users/rustamkeneev/Desktop/ToDoAppSwiftUI
+    /Applications/Xcode.app/Contents/Developer/usr/bin/momc --sdkroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator17.2.sdk --iphonesimulator-deployment-target 17.2 --module ToDoAppSwiftUI /Users/rustamkeneev/Desktop/ToDoAppSwiftUI/Todo.xcdatamodeld /Users/rustamkeneev/Library/Developer/Xcode/DerivedData/ToDoAppSwiftUI-fjyyvnwqmgpxhognualqvvzalpmu/Build/Intermediates.noindex/Previews/ToDoAppSwiftUI/Products/Debug-iphonesimulator/ToDoAppSwiftUI.app/
+
+Todo.xcdatamodel: note: Model Todo version checksum: Xhl2jT60cE7Dt/n5KO9NQZrodRHx9xZzSlpMoLiTeoU=
+/Users/rustamkeneev/Desktop/ToDoAppSwiftUI/Todo.xcdatamodeld/Todo.xcdatamodel:Todo: warning: abstract entity Todo has no children [1]
+/Users/rustamkeneev/Desktop/ToDoAppSwiftUI/Todo.xcdatamodeld/Todo.xcdatamodel:Todo: warning: Abstract entities are not supported in SwiftData. [10]
+
+/Users/rustamkeneev/Desktop/ToDoAppSwiftUI/Todo.xcdatamodel:1:1: Model Todo version checksum: Xhl2jT60cE7Dt/n5KO9NQZrodRHx9xZzSlpMoLiTeoU=
+
+abstract entity Todo has no children [1]
+
+Abstract entities are not supported in SwiftData. [10]
+
+
+
+Build succeeded    24/3/24, 15:54    3.9 seconds
