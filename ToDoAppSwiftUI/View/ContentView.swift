@@ -18,29 +18,36 @@ struct ContentView: View {
     //MARK: - BODY
     var body: some View {
         NavigationView{
-            List{
-                ForEach(self.todos, id: \.self){ item in
-                    HStack{
-                        Text(item.name ?? "Unknown")
-                        Spacer()
-                        Text(item.priority ?? "Unknown")
-                    }
-                }//: FOREACH
-                .onDelete(perform: deleteToDo)
-            }//: LIST
-            .navigationBarTitle("ToDo", displayMode: .inline)
-            .navigationBarItems(
-                leading: EditButton(),
-                trailing: Button(action: {
-                //SHOW ADD TODO VIEW
-                self.showAddTodoView.toggle()
-            }){
-                Image(systemName: "plus")
-            })//: BUTTON ADD
-            .sheet(isPresented: $showAddTodoView){
-                AddTodoView()
-                    .environment(\.managedObjectContext, self.managedObjectContext)
+            ZStack {
+                List{
+                    ForEach(self.todos, id: \.self){ item in
+                        HStack{
+                            Text(item.name ?? "Unknown")
+                            Spacer()
+                            Text(item.priority ?? "Unknown")
+                        }
+                    }//: FOREACH
+                    .onDelete(perform: deleteToDo)
+                }//: LIST
+                .navigationBarTitle("ToDo", displayMode: .inline)
+                .navigationBarItems(
+                    leading: EditButton(),
+                    trailing: Button(action: {
+                    //SHOW ADD TODO VIEW
+                    self.showAddTodoView.toggle()
+                }){
+                    Image(systemName: "plus")
+                })//: BUTTON ADD
+                .sheet(isPresented: $showAddTodoView){
+                    AddTodoView()
+                        .environment(\.managedObjectContext, self.managedObjectContext)
             }
+                //MARK: - NO TODO ITEMS
+                if todos.count == 0 {
+                    EmptyListView()
+                }
+            }//: ZSTACK
+        
         }//: NAVIGATION
     }
     
