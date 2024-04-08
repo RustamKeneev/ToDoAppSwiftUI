@@ -15,6 +15,7 @@ struct ContentView: View {
     
     @State private var showAddTodoView: Bool = false
     @State private var animatingButton: Bool = false
+    @State private var showingSettingsView: Bool = false
 
     //MARK: - BODY
     var body: some View {
@@ -35,13 +36,13 @@ struct ContentView: View {
                     leading: EditButton(),
                     trailing: Button(action: {
                     //SHOW ADD TODO VIEW
-                    self.showAddTodoView.toggle()
+                    self.showingSettingsView.toggle()
                 }){
-                    Image(systemName: "plus")
+                    Image(systemName: "paintbrush")
+                        .imageScale(.large)
                 })//: BUTTON ADD
-                .sheet(isPresented: $showAddTodoView){
-                    AddTodoView()
-                        .environment(\.managedObjectContext, self.managedObjectContext)
+                .sheet(isPresented: $showingSettingsView){
+                    SettingsView()
             }
                 //MARK: - NO TODO ITEMS
                 if todos.count == 0 {
@@ -51,6 +52,7 @@ struct ContentView: View {
             .sheet(isPresented: $showAddTodoView){
                 AddTodoView()
                     .environment(\.managedObjectContext, self.managedObjectContext)
+                    
         }
             .overlay(
                 ZStack {
@@ -68,6 +70,7 @@ struct ContentView: View {
 
                     }
                     .animation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true))
+                    Spacer()
                     Button(action: {
                         self.showAddTodoView.toggle()
                     }){
@@ -77,14 +80,14 @@ struct ContentView: View {
                             .background(Circle().fill(Color("ColorBase")))
                             .frame(width: 48, height: 48, alignment: .center)
                     }//: Button
-                    .onAppear(perform: {
-                        self.animatingButton.toggle()
-                    })
                 }//: ZSTACK
                     .padding(.bottom, 16)
                     .padding(.trailing, 16)
                 ,alignment: .bottomTrailing
             )
+            .onAppear {
+                self.animatingButton.toggle()
+            }
         }//: NAVIGATION
     }
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF59AB0F2BC42B4E00A458AD /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59AB0E2BC42B4E00A458AD /* FormRowStaticView.swift */; };
+		FF59AB112BC4307900A458AD /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59AB102BC4307900A458AD /* FormRowLinkView.swift */; };
 		FFF60DB62BAF34AB00BEF873 /* ToDoAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60DB52BAF34AB00BEF873 /* ToDoAppSwiftUIApp.swift */; };
 		FFF60DB82BAF34AB00BEF873 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60DB72BAF34AB00BEF873 /* ContentView.swift */; };
 		FFF60DBA2BAF34AC00BEF873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF60DB92BAF34AC00BEF873 /* Assets.xcassets */; };
@@ -15,9 +17,12 @@
 		FFF60DC82BB029FF00BEF873 /* Todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFF60DC62BB029FF00BEF873 /* Todo.xcdatamodeld */; };
 		FFF60DCC2BB19C4A00BEF873 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF60DCB2BB19C4A00BEF873 /* Launch Screen.storyboard */; };
 		FFF60DCE2BB19E8600BEF873 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60DCD2BB19E8600BEF873 /* EmptyListView.swift */; };
+		FFF60DD02BB54B0B00BEF873 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60DCF2BB54B0B00BEF873 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF59AB0E2BC42B4E00A458AD /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
+		FF59AB102BC4307900A458AD /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
 		FFF60DB22BAF34AB00BEF873 /* ToDoAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF60DB52BAF34AB00BEF873 /* ToDoAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAppSwiftUIApp.swift; sourceTree = "<group>"; };
 		FFF60DB72BAF34AB00BEF873 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,6 +32,7 @@
 		FFF60DC72BB029FF00BEF873 /* Todo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todo.xcdatamodel; sourceTree = "<group>"; };
 		FFF60DCB2BB19C4A00BEF873 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FFF60DCD2BB19E8600BEF873 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
+		FFF60DCF2BB54B0B00BEF873 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				FFF60DB72BAF34AB00BEF873 /* ContentView.swift */,
 				FFF60DC42BAF353800BEF873 /* AddTodoView.swift */,
 				FFF60DCD2BB19E8600BEF873 /* EmptyListView.swift */,
+				FFF60DCF2BB54B0B00BEF873 /* SettingsView.swift */,
+				FF59AB0E2BC42B4E00A458AD /* FormRowStaticView.swift */,
+				FF59AB102BC4307900A458AD /* FormRowLinkView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,9 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF59AB0F2BC42B4E00A458AD /* FormRowStaticView.swift in Sources */,
 				FFF60DB82BAF34AB00BEF873 /* ContentView.swift in Sources */,
 				FFF60DB62BAF34AB00BEF873 /* ToDoAppSwiftUIApp.swift in Sources */,
 				FFF60DC52BAF353800BEF873 /* AddTodoView.swift in Sources */,
+				FFF60DD02BB54B0B00BEF873 /* SettingsView.swift in Sources */,
+				FF59AB112BC4307900A458AD /* FormRowLinkView.swift in Sources */,
 				FFF60DC82BB029FF00BEF873 /* Todo.xcdatamodeld in Sources */,
 				FFF60DCE2BB19E8600BEF873 /* EmptyListView.swift in Sources */,
 			);
