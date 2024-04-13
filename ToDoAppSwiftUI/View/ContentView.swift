@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     //MARK: - PROPERTIES
     @Environment(\.managedObjectContext) var managedObjectContext
+    @EnvironmentObject var iconSettings: IconNames
     
     @FetchRequest(entity: Todo.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Todo.name, ascending: true)]) var todos: FetchedResults<Todo>
     
@@ -43,6 +44,7 @@ struct ContentView: View {
                 })//: BUTTON ADD
                 .sheet(isPresented: $showingSettingsView){
                     SettingsView()
+                        .environmentObject(self.iconSettings)
             }
                 //MARK: - NO TODO ITEMS
                 if todos.count == 0 {
