@@ -18,6 +18,9 @@
 		FF59AB352BC8447E00A458AD /* Green Light.png in Resources */ = {isa = PBXBuildFile; fileRef = FF59AB2C2BC8447E00A458AD /* Green Light.png */; };
 		FF59AB362BC8447E00A458AD /* Blue Light.png in Resources */ = {isa = PBXBuildFile; fileRef = FF59AB2D2BC8447E00A458AD /* Blue Light.png */; };
 		FF59AB372BC8447E00A458AD /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = FF59AB2E2BC8447E00A458AD /* Green.png */; };
+		FF59AB3C2BCAA9C300A458AD /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59AB3B2BCAA9C300A458AD /* ThemeModel.swift */; };
+		FF59AB3E2BCAAA6A00A458AD /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59AB3D2BCAAA6A00A458AD /* ThemeData.swift */; };
+		FF59AB402BCAB0C300A458AD /* ThemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF59AB3F2BCAB0C300A458AD /* ThemeSettings.swift */; };
 		FFF60DB62BAF34AB00BEF873 /* ToDoAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60DB52BAF34AB00BEF873 /* ToDoAppSwiftUIApp.swift */; };
 		FFF60DB82BAF34AB00BEF873 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60DB72BAF34AB00BEF873 /* ContentView.swift */; };
 		FFF60DBA2BAF34AC00BEF873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF60DB92BAF34AC00BEF873 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		FF59AB2C2BC8447E00A458AD /* Green Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Light.png"; sourceTree = "<group>"; };
 		FF59AB2D2BC8447E00A458AD /* Blue Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue Light.png"; sourceTree = "<group>"; };
 		FF59AB2E2BC8447E00A458AD /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.png; sourceTree = "<group>"; };
+		FF59AB3B2BCAA9C300A458AD /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
+		FF59AB3D2BCAAA6A00A458AD /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
+		FF59AB3F2BCAB0C300A458AD /* ThemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettings.swift; sourceTree = "<group>"; };
 		FFF60DB22BAF34AB00BEF873 /* ToDoAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF60DB52BAF34AB00BEF873 /* ToDoAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAppSwiftUIApp.swift; sourceTree = "<group>"; };
 		FFF60DB72BAF34AB00BEF873 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +87,16 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		FF59AB3A2BCAA90F00A458AD /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				FF59AB3B2BCAA9C300A458AD /* ThemeModel.swift */,
+				FF59AB3D2BCAAA6A00A458AD /* ThemeData.swift */,
+				FF59AB3F2BCAB0C300A458AD /* ThemeSettings.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		FFF60DA92BAF34AB00BEF873 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +118,7 @@
 		FFF60DB42BAF34AB00BEF873 /* ToDoAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FF59AB3A2BCAA90F00A458AD /* Theme */,
 				FF59AB252BC5313800A458AD /* Info.plist */,
 				FF59AB122BC5152000A458AD /* Icons */,
 				FFF60DB52BAF34AB00BEF873 /* ToDoAppSwiftUIApp.swift */,
@@ -214,11 +231,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF59AB0F2BC42B4E00A458AD /* FormRowStaticView.swift in Sources */,
+				FF59AB3E2BCAAA6A00A458AD /* ThemeData.swift in Sources */,
 				FFF60DB82BAF34AB00BEF873 /* ContentView.swift in Sources */,
+				FF59AB402BCAB0C300A458AD /* ThemeSettings.swift in Sources */,
 				FFF60DB62BAF34AB00BEF873 /* ToDoAppSwiftUIApp.swift in Sources */,
 				FFF60DC52BAF353800BEF873 /* AddTodoView.swift in Sources */,
 				FFF60DD02BB54B0B00BEF873 /* SettingsView.swift in Sources */,
 				FF59AB112BC4307900A458AD /* FormRowLinkView.swift in Sources */,
+				FF59AB3C2BCAA9C300A458AD /* ThemeModel.swift in Sources */,
 				FFF60DC82BB029FF00BEF873 /* Todo.xcdatamodeld in Sources */,
 				FFF60DCE2BB19E8600BEF873 /* EmptyListView.swift in Sources */,
 			);

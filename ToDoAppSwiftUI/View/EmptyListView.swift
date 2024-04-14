@@ -26,6 +26,11 @@ struct EmptyListView: View {
         "Collect tasks ahead of time",
         "Each night schedule for tommorow"
     ]
+    
+    //MARK: - THEME
+    @ObservedObject var theme = ThemeSettings()
+    var themes: [Theme] = themeData
+
     //MARK: - BODY
     var body: some View {
         ZStack {
@@ -35,9 +40,12 @@ struct EmptyListView: View {
                     .scaledToFit()
                     .frame(minWidth: 256, idealWidth: 280, maxWidth: 360, minHeight: 256, idealHeight: 280, maxHeight: 360, alignment: .center)
                     .layoutPriority(1)
+                    .foregroundColor(themes[self.theme.themeSettings].themeColor)
+                
                 Text("\(tips.randomElement() ?? self.tips[0])")
                     .layoutPriority(0.5)
                     .font(.system(.headline, design: .rounded))
+                    .foregroundColor(themes[self.theme.themeSettings].themeColor)
             }//: VSTACK
             .padding(.horizontal)
             .opacity(isAnimated ? 1 : 0)
